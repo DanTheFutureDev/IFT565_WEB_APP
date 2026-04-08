@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sarcastic Password Strength Meter</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="badge">90s GeoCities Cyber Edition</p>
+        <h1>Sarcastic Password Strength Meter</h1>
+        <p class="subtitle">
+          Because nothing says "security" like being roasted by a web page.
+        </p>
+      </header>
+
+      <section class="panel">
+        <label for="passwordInput" class="label">Type your "unhackable" password:</label>
+        <div class="input-row">
+          <input
+            id="passwordInput"
+            type="password"
+            autocomplete="off"
+            placeholder="e.g. hunter2..."
+            aria-describedby="scoreText roastLine"
+          />
+          <button id="toggleBtn" type="button" aria-label="Toggle password visibility">
+            Show
+          </button>
+        </div>
+
+        <div class="meter-wrap" aria-hidden="true">
+          <div id="meterBar" class="meter-bar"></div>
+        </div>
+        <p id="scoreText" class="score-text">Strength Score: 0 / 100</p>
+        <p id="roastLine" class="roast">Awaiting a questionable password choice...</p>
+
+        <ul id="checklist" class="checklist">
+          <li data-rule="length">At least 10 characters</li>
+          <li data-rule="lower">Includes lowercase letters</li>
+          <li data-rule="upper">Includes uppercase letters</li>
+          <li data-rule="number">Includes numbers</li>
+          <li data-rule="symbol">Includes symbols</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <marquee behavior="alternate" scrollamount="7">
+          !! Security Theater Certified !!
+        </marquee>
+      </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

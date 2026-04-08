@@ -1,0 +1,13 @@
+Video Demo Instructions (30-60 seconds)
+=======================================
+
+Record a short screen demo showing:
+1) Opening the app
+2) Typing at least 3 different passwords
+3) Score bar and sarcastic feedback updating live
+4) Show/Hide password toggle behavior
+5) Brief view of mobile-responsive layout (optional but recommended)
+
+Save output as one of:
+- MP4 in this folder (recommended): demo.mp4
+- or a public Loom/YouTube URL in a text file named demo-link.txt

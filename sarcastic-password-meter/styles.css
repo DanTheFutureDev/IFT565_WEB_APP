@@ -1,0 +1,185 @@
+:root {
+  --bg: #0c0220;
+  --panel: #1a0442;
+  --neon-pink: #ff2bd6;
+  --neon-cyan: #2bfffe;
+  --neon-green: #8aff2b;
+  --text: #f6f2ff;
+  --warn: #ff7a00;
+  --danger: #ff345d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 15%, #38056f 0%, transparent 35%),
+    radial-gradient(circle at 85% 20%, #2f0a8b 0%, transparent 30%),
+    linear-gradient(180deg, #120330 0%, #050211 100%);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.app-shell {
+  width: min(760px, 100%);
+  border: 3px solid var(--neon-cyan);
+  background: rgba(10, 0, 30, 0.85);
+  box-shadow: 0 0 16px var(--neon-cyan), inset 0 0 18px rgba(43, 255, 254, 0.15);
+}
+
+.hero {
+  text-align: center;
+  border-bottom: 2px dashed var(--neon-pink);
+  padding: 1rem 1rem 0.8rem;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0.6rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #100120;
+  background: linear-gradient(90deg, var(--neon-green), #fbff00);
+}
+
+h1 {
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 0 6px var(--neon-pink);
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  color: #d8ccff;
+  font-size: 0.95rem;
+}
+
+.panel {
+  padding: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input,
+button {
+  border: 2px solid var(--neon-pink);
+  font: inherit;
+}
+
+input {
+  flex: 1;
+  background: #110328;
+  color: #fff;
+  padding: 0.7rem 0.8rem;
+}
+
+input:focus,
+button:focus {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 1px;
+}
+
+button {
+  min-width: 88px;
+  background: #2f095f;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.7rem 0.8rem;
+}
+
+button:hover {
+  background: #49178d;
+}
+
+.meter-wrap {
+  margin-top: 0.9rem;
+  height: 18px;
+  border: 2px solid #cab2ff;
+  background: #17063f;
+}
+
+.meter-bar {
+  height: 100%;
+  width: 0%;
+  transition: width 200ms ease;
+  background: var(--danger);
+}
+
+.meter-bar.weak {
+  background: linear-gradient(90deg, #ff3e5f, #ff7a00);
+}
+
+.meter-bar.mid {
+  background: linear-gradient(90deg, #ffb000, #ffe85e);
+}
+
+.meter-bar.strong {
+  background: linear-gradient(90deg, #58ff7a, #2bfffe);
+}
+
+.score-text {
+  margin: 0.8rem 0 0.35rem;
+  font-weight: 700;
+}
+
+.roast {
+  margin: 0;
+  min-height: 2.6em;
+  line-height: 1.3;
+  color: #ffd2e2;
+}
+
+.checklist {
+  margin: 0.9rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.checklist li {
+  color: #ff9fb7;
+}
+
+.checklist li.pass {
+  color: var(--neon-green);
+}
+
+.checklist li.fail {
+  color: #ff9fb7;
+}
+
+.footer {
+  border-top: 2px dashed var(--neon-pink);
+  color: #ffe9ad;
+  font-weight: 700;
+  padding: 0.6rem;
+}
+
+@media (max-width: 520px) {
+  .input-row {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,13 @@
+Cursor Chat Export Placeholder
+===============================
+
+This artifact must be produced manually from Cursor:
+1) Open Chat pane (Cmd+L or Ctrl+L)
+2) Click the ... menu in the chat pane
+3) Select Export Chat
+4) Save exported file in this folder with a name like:
+   cursor-chat-export.json or cursor-chat-export.md
+
+Note:
+- This placeholder exists so the submission package has all required sections.
+- Replace or keep alongside the real export file before final submission.
