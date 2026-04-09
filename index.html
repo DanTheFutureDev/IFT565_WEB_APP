@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nurburgring Lap Predictor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Nurburgring Lap Predictor</h1>
+      <p>
+        Choose a popular performance car, adjust specs, and predict a likely
+        Nordschleife lap time from historical trends.
+      </p>
+    </header>
+
+    <main class="layout">
+      <section class="card controls">
+        <h2>Car Configuration</h2>
+        <form id="predictor-form">
+          <label for="car-select">Popular car model</label>
+          <select id="car-select" name="car"></select>
+
+          <div class="grid-two">
+            <div>
+              <label for="year-input">Model year</label>
+              <input id="year-input" name="year" type="number" min="2000" max="2030" />
+            </div>
+            <div>
+              <label for="hp-input">Power (hp)</label>
+              <input id="hp-input" name="hp" type="number" min="80" max="2200" step="1" />
+            </div>
+          </div>
+
+          <div class="grid-two">
+            <div>
+              <label for="weight-input">Weight (kg)</label>
+              <input
+                id="weight-input"
+                name="weight"
+                type="number"
+                min="700"
+                max="2600"
+                step="1"
+              />
+            </div>
+            <div>
+              <label for="drivetrain-select">Drivetrain</label>
+              <select id="drivetrain-select" name="drivetrain">
+                <option value="RWD">RWD</option>
+                <option value="AWD">AWD</option>
+                <option value="FWD">FWD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid-two">
+            <div>
+              <label for="tire-select">Tire category</label>
+              <select id="tire-select" name="tire">
+                <option value="road">Road Performance</option>
+                <option value="sport">Sport / Track-Friendly</option>
+                <option value="cup2">Cup 2 / Extreme Road</option>
+                <option value="semi">Semi-Slick</option>
+                <option value="slick">Full Slick</option>
+              </select>
+            </div>
+            <div>
+              <label for="temp-input">Track temp (°C)</label>
+              <input id="temp-input" name="temp" type="number" min="0" max="55" step="1" />
+            </div>
+          </div>
+
+          <label for="aero-input">Aero setup level: <span id="aero-value">5</span>/10</label>
+          <input id="aero-input" name="aero" type="range" min="0" max="10" step="1" />
+        </form>
+      </section>
+
+      <section class="card prediction">
+        <h2>Predicted Nordschleife Time</h2>
+        <p id="predicted-time" class="big-time">--:--.---</p>
+        <p id="delta-line" class="delta-line"></p>
+        <div class="chips">
+          <span id="confidence-chip" class="chip">Confidence: --</span>
+          <span id="neighbors-chip" class="chip">Similar runs: --</span>
+        </div>
+        <h3>Model factors</h3>
+        <ul id="factor-list"></ul>
+        <p class="note">
+          Educational estimator only. Real laps vary with driver skill, fuel load,
+          weather, setup detail, and measurement method.
+        </p>
+      </section>
+
+      <section class="card history">
+        <h2>Closest Historical References</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Car</th>
+              <th>Year</th>
+              <th>Specs</th>
+              <th>Lap Time</th>
+              <th>Similarity</th>
+            </tr>
+          </thead>
+          <tbody id="history-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
