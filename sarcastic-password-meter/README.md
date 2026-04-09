@@ -4,7 +4,7 @@ A novelty single-utility web app that scores passwords and gives sarcastic feedb
 
 ## Visual style
 
-The app uses a **90s GeoCities Cyber Edition** theme: neon gradients, chrome-like panels, glowing text, and playful UI flair.
+The app uses a **Matrix/System Shock cyberpunk** aesthetic: phosphor-green palettes, scanline overlays, HUD-like panel framing, and subtle glitch effects.
 
 ## Run locally
 
